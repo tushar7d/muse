@@ -1,46 +1,91 @@
-<style>
-	h1, figure, p {
-		text-align: center;
-		margin: 0 auto;
+<script>
+	import Content from "./Components/Content.svelte";
+	import Grid from "./Components/Grid.svelte";
+  </script>
+  
+  <style>
+	.container {
+	  max-width: 1280px;
+	  min-width: 320px;
+	  margin: 0 auto 0 auto;
+	  display: block;
+	  
 	}
-
-	h1 {
-		font-size: 2.8em;
-		text-transform: uppercase;
-		font-weight: 700;
-		margin: 0 0 0.5em 0;
+	.grid {
+	  width: 100%;
+  
 	}
-
-	figure {
-		margin: 0 0 1em 0;
+	.content {
+	  width: 100%;
 	}
-
-	img {
+	/* Extra small devices (phones, 600px and down) */
+	/*  @media only screen and (max-width: 600px) {
+	  .container {
+		background-color: red;
+	  }
+	}
+  
+	/* Small devices (portrait tablets and large phones, 600px and up) 
+	@media only screen and (min-width: 600px) {
+	  .container {
+		background-color: pink;
+	  }
+	}
+	*/
+  
+	
+  
+	/* Large devices (laptops/desktops, 992px and up) */
+	@media only screen and (min-width: 992px) {
+	  .container {
+		display: flex;
+		
+		height: 100vh;
+		overflow: hidden;
+	  }
+	  .content {
+		width: 50%;
+	  }
+	  .grid {
+		width: 50%;
+		overflow: scroll;
+		-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+	  }
+	  .grid::-webkit-scrollbar {
+	display: none;
+  }
+	}
+  
+	/* Extra large devices (large laptops and desktops, 1200px and up) */
+	@media only screen and (min-width: 1200px) {
+	  .container {
 		width: 100%;
-		max-width: 400px;
-		margin: 0 0 1em 0;
+		height: 100vh;
+		overflow: hidden;
+	  }
+	  .content {
+		width: 50%;
+	  }
+	  .grid {
+		width: 50%;
+		overflow: scroll;
+		-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+	  }
+	  .grid::-webkit-scrollbar {
+	display: none;
+  }
 	}
-
-	p {
-		margin: 1em auto;
-	}
-
-	@media (min-width: 480px) {
-		h1 {
-			font-size: 4em;
-		}
-	}
-</style>
-
-<svelte:head>
-	<title>Sapper project template</title>
-</svelte:head>
-
-<h1>Great success!</h1>
-
-<figure>
-	<img alt='Borat' src='great-success.png'>
-	<figcaption>HIGH FIVE!</figcaption>
-</figure>
-
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+  </style>
+  
+  <div class="container">
+	<div class="content">
+	  <Content />
+	</div>
+  
+	<div class="grid">
+	  <Grid />
+	</div>
+  </div>
+  
