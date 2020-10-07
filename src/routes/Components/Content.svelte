@@ -1,6 +1,32 @@
 
 
 <style>
+    ul {
+  list-style-type: none;
+  margin: 0;
+	padding: 0;
+    border: 0;
+    margin-top: 24px;
+    
+ }
+ li{
+     padding-bottom: 12px;
+     font-size: 18px;
+     font-weight: 600;
+ }
+ a:link{
+    color: white;
+ }
+ a:hover{
+    color: tomato;
+ }
+ a:active{
+     color: tomato;
+ }
+ a{
+    text-decoration: none;
+    color: white;
+ }
     section {
         display: flex;
         flex-direction: column;
