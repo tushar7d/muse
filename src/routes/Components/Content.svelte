@@ -75,6 +75,7 @@
       display: none;
     }
     section {
+    margin-top: 120px;
       padding: 24px;
       height: auto;
     }
