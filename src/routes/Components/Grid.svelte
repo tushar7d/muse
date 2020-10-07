@@ -50,15 +50,17 @@
         grid-template-columns: 1fr;
         grid-row-gap: 15px;
         padding: 80px;
+
     }
 
     h1 {
         font-size: 32px;
         font-weight: 600;
         margin-bottom: 24px;
+        
     }
 
-    @media only screen and (max-width: 991px) {
+    @media only screen and (max-width: 425px) {
         h1 {
             font-size: 24px;
             font-weight: 600;
@@ -66,17 +68,24 @@
         }
         .vsection {
             padding: 24px;
+           
+        }
+        .prj{
+            width:100%;
+            height: 40px;
         }
     }
 </style>
 
 <div class="vsection">
-    <h1 id="projects">Selected Projects</h1>
+    <div class="prj" id="projects" />
+    <h1 >Selected Projects</h1>
     {#each data as d}
         <Card
             data={{ name: d.name, description: d.description, company: d.company }} />
     {/each}
-    <h1 id="articles">Writing and other fun stuff</h1>
+    <div class="prj" id="articles" />
+    <h1  >Writing and other fun stuff</h1>
 
     {#each datah as d}
         <HalfCard data={{ pub: d.pub, title: d.title }} />

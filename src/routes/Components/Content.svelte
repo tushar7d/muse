@@ -1,16 +1,4 @@
 <style>
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    margin-top: 24px;
-  }
-  li {
-    padding-bottom: 12px;
-    font-size: 18px;
-    font-weight: 600;
-  }
   a:link {
     color: white;
   }
@@ -43,20 +31,6 @@
     line-height: 1.5;
     margin: 0px;
   }
-  .quick_link_container {
-    display: flex;
-
-    align-items: center;
-  }
-  .image_placeholder {
-    width: 60px;
-    height: 60px;
-    border-radius: 160px;
-    background-color: white;
-  }
-  .link {
-    margin-left: 12px;
-  }
 
   @media only screen and (max-width: 425px) {
     h1 {
@@ -71,16 +45,30 @@
       line-height: 1.5;
       margin: 0px;
     }
-    .quick_link_container {
-      display: none;
-    }
+
     section {
-    margin-top: 120px;
+      margin-top: 80px;
       padding: 24px;
       height: auto;
     }
+    .navbar {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      width: calc(100% - 24px);
+      padding: 12px;
+      background-color: rgb(46, 46, 46);
+      position: fixed ; 
+      top: 0;
+      z-index: 10000;
+    }
+    .navbar > a {
+      text-align: center;
+      color: white;
+    }
   }
 </style>
+
+
 
 <section>
   <div>
@@ -89,20 +77,10 @@
       A Product designer & Design technologist living in New Delhi. Currently I
       am building consumer products and internal design tools at Zomato.
     </p>
-    <div>
-      <ul>
-        <li><a href="#projects">Selected projects</a></li>
-        <li><a href="#articles">Selected projects</a></li>
-        <li><a href="#plugin">Selected projects</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="quick_link_container">
-    <div class="image_placeholder" />
-    <div class="link">LinkedIn</div>
-    <div class="link">Figma</div>
-    <div class="link">Dribbble</div>
-    <div class="link">Github</div>
   </div>
 </section>
+<div class="navbar">
+    <a href="#projects">Projects</a>
+    <a href="#articles">Writing</a>
+    <a href="#plugin">Plugins</a>
+  </div>
