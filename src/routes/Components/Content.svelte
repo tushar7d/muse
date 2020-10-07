@@ -70,7 +70,21 @@
             in New Delhi. Currently I am building consumer products and internal
             design tools at Zomato.
         </p>
+        <div>
+            <ul>
+                <li>
+                    <a href="#projects">Selected projects</a>
+                </li>
+                <li>
+                    <a href="#articles">Selected projects</a>
+                </li>
+                <li>
+                    <a href="#plugin">Selected projects</a>
+                </li>
+            </ul>
+        </div>
     </div>
+
     <div class="quick_link_container">
         <div class="image_placeholder" />
         <div class="link">LinkedIn</div>

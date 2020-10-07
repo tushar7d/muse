@@ -65,23 +65,23 @@
             margin-bottom: 24px;
         }
         .vsection {
-            padding: 40px;
+            padding: 24px;
         }
     }
 </style>
 
 <div class="vsection">
-    <h1>Selected Projects</h1>
+    <h1 id="projects">Selected Projects</h1>
     {#each data as d}
         <Card
             data={{ name: d.name, description: d.description, company: d.company }} />
     {/each}
-    <h1>Writing and other fun stuff</h1>
+    <h1 id="articles">Writing and other fun stuff</h1>
 
     {#each datah as d}
         <HalfCard data={{ pub: d.pub, title: d.title }} />
     {/each}
-    <h1>Plugin and tools</h1>
+    <h1 id="plugin">Plugin and tools</h1>
 
     {#each datah as d}
         <HalfCard data={{ pub: d.pub, title: d.title }} />
