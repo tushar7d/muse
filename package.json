@@ -1,6 +1,6 @@
 {
-  "name": "todo",
-  "description": "todo",
+  "name": "tushardebnathy.com",
+  "description": "personal portfolio",
   "version": "0.0.1",
   "scripts": {
     "start": "sapper dev",
